@@ -1,0 +1,33 @@
+# Core
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+
+# LLM & Vision
+openai
+anthropic
+groq
+instructor
+langchain
+langchain-community
+
+# OCR & Document Processing
+pytesseract
+pillow
+pdf2image
+pypdf
+opencv-python
+
+# Utilities
+python-dotenv
+tenacity
+loguru
+aiofiles
+async-timeout<5.0.0
+packaging<26.0.0
+redis # Optional: for caching
+
+# Monitoring
+prometheus-fastapi-instrumentator

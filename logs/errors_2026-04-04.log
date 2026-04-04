@@ -1,0 +1,96 @@
+2026-04-04 22:15:13.378 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:15:18.567 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:15:19.176 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:15:19.324 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:15:22.873 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:15:23.227 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:15:23.237 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:19:18.910 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:19:22.904 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:19:23.630 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:19:23.781 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:19:26.707 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:19:27.111 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:19:27.122 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:23:32.170 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:23:37.204 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:23:37.670 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:23:37.902 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:23:40.778 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:23:41.239 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:23:41.250 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:30:08.212 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:30:12.746 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:30:13.708 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:30:13.931 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:30:16.866 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:30:17.289 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:30:17.295 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing

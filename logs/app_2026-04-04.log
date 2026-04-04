@@ -1,0 +1,364 @@
+2026-04-04 22:13:04.477 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:13:04.479 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:13:04.748 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:13:04.772 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:13:04.772 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:13:04.797 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:13:04.827 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:13:04.828 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:13:04.928 | INFO     | app.main:lifespan:29 | Starting Invoice Processing System
+2026-04-04 22:13:06.353 | INFO     | app.main:lifespan:31 | Shutting down Invoice Processing System
+2026-04-04 22:13:10.408 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:13:10.409 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:13:10.557 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:13:10.585 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:13:10.586 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:13:10.620 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:13:10.655 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:13:10.656 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:13:10.790 | INFO     | app.main:lifespan:29 | Starting Invoice Processing System
+2026-04-04 22:13:15.866 | INFO     | app.main:lifespan:31 | Shutting down Invoice Processing System
+2026-04-04 22:13:29.266 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:13:29.267 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:13:29.421 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:13:29.459 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:13:29.462 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:13:29.498 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:13:29.534 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:13:29.535 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:13:29.706 | INFO     | app.main:lifespan:29 | Starting Invoice Processing System
+2026-04-04 22:15:11.947 | INFO     | app.main:process_document:76 | Processing request 1ac3d2dd - File: test_sample.pdf
+2026-04-04 22:15:11.953 | INFO     | app.main:process_document:98 | [1ac3d2dd] Phase 1: Starting extraction
+2026-04-04 22:15:11.953 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-04 22:15:12.433 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-04 22:15:12.436 | INFO     | app.main:process_document:106 | [1ac3d2dd] Phase 2: Starting agentic cleansing
+2026-04-04 22:15:12.441 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:15:13.378 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:15:13.380 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:15:18.567 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:15:18.567 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:15:19.176 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:15:19.177 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:15:19.177 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:15:19.178 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 6742.35ms
+2026-04-04 22:15:19.179 | INFO     | app.main:process_document:112 | [1ac3d2dd] Phase 3: Starting JSON structuring
+2026-04-04 22:15:19.180 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:15:19.324 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:15:19.325 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:15:22.873 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:15:22.883 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:15:23.227 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:15:23.227 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:15:23.227 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:15:23.237 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:15:23.238 | INFO     | app.phases.phase3_structuring:_fix_validation_errors:97 | Attempting to fix validation errors
+2026-04-04 22:15:23.247 | INFO     | app.main:process_document:118 | [1ac3d2dd] Processing complete in 11293.28ms
+2026-04-04 22:15:23.255 | INFO     | app.main:log_processing_metrics:156 | Metrics for 1ac3d2dd: {'extraction': 482.47623443603516, 'cleansing': 6743.34454536438, 'structuring': 4067.4638748168945}
+2026-04-04 22:19:18.394 | INFO     | app.main:process_document:76 | Processing request 466334c5 - File: test_sample.pdf
+2026-04-04 22:19:18.413 | INFO     | app.main:process_document:98 | [466334c5] Phase 1: Starting extraction
+2026-04-04 22:19:18.415 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-04 22:19:18.589 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-04 22:19:18.595 | INFO     | app.main:process_document:106 | [466334c5] Phase 2: Starting agentic cleansing
+2026-04-04 22:19:18.599 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:19:18.910 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:19:18.912 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:19:22.904 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:19:22.904 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:19:23.630 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:19:23.630 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:19:23.631 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:19:23.632 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 5036.62ms
+2026-04-04 22:19:23.632 | INFO     | app.main:process_document:112 | [466334c5] Phase 3: Starting JSON structuring
+2026-04-04 22:19:23.633 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:19:23.781 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:19:23.782 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:19:26.707 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:19:26.707 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:19:27.111 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:19:27.111 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:19:27.113 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:19:27.122 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:19:27.123 | INFO     | app.phases.phase3_structuring:_fix_validation_errors:97 | Attempting to fix validation errors
+2026-04-04 22:19:27.125 | INFO     | app.main:process_document:118 | [466334c5] Processing complete in 8710.02ms
+2026-04-04 22:19:27.131 | INFO     | app.main:log_processing_metrics:156 | Metrics for 466334c5: {'extraction': 180.6161403656006, 'cleansing': 5036.622762680054, 'structuring': 3492.784261703491}
+2026-04-04 22:21:45.024 | INFO     | app.main:lifespan:31 | Shutting down Invoice Processing System
+2026-04-04 22:22:00.836 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:22:00.838 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:22:01.094 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:01.120 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:01.121 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:01.160 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:01.195 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:01.196 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:01.338 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:22:06.622 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:22:06.623 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:22:06.767 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:06.786 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:06.786 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:06.814 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:06.832 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:06.832 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:06.910 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:22:16.814 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:22:22.385 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:22:22.386 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:22:22.532 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:22.564 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:22.566 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:22.600 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:22.635 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:22.635 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:22.721 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:22:25.503 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:22:29.970 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:22:29.971 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:22:30.092 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:30.113 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:30.114 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:30.145 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:22:30.167 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:22:30.168 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:22:30.239 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:23:03.357 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:23:10.056 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:23:10.056 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:23:10.229 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:23:10.261 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:23:10.262 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:23:10.290 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:23:10.322 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:23:10.324 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:23:10.402 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:23:29.953 | INFO     | app.main:process_document:79 | Processing request 8c86a587 - File: test_sample.pdf
+2026-04-04 22:23:29.953 | INFO     | app.main:process_document:102 | [8c86a587] Phase 1: Starting extraction
+2026-04-04 22:23:29.953 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-04 22:23:30.224 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-04 22:23:30.224 | INFO     | app.main:process_document:110 | [8c86a587] Phase 2: Starting agentic cleansing
+2026-04-04 22:23:30.224 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:23:32.170 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:23:32.172 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:23:37.204 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:23:37.204 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:23:37.670 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:23:37.670 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:23:37.670 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:23:37.674 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 7450.07ms
+2026-04-04 22:23:37.675 | INFO     | app.main:process_document:116 | [8c86a587] Phase 3: Starting JSON structuring
+2026-04-04 22:23:37.675 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:23:37.902 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:23:37.904 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:23:40.778 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:23:40.780 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:23:41.239 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:23:41.244 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:23:41.244 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:23:41.250 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:23:41.252 | INFO     | app.phases.phase3_structuring:_fix_validation_errors:97 | Attempting to fix validation errors
+2026-04-04 22:23:41.269 | INFO     | app.main:process_document:122 | [8c86a587] Processing complete in 11314.22ms
+2026-04-04 22:23:41.275 | INFO     | app.main:log_processing_metrics:175 | Metrics for 8c86a587: {'extraction': 270.4010009765625, 'cleansing': 7450.065135955811, 'structuring': 3593.750238418579}
+2026-04-04 22:29:23.434 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:29:36.684 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:29:36.684 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:29:36.953 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:29:36.997 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:29:37.000 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:29:37.042 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:29:37.082 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:29:37.084 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:29:37.217 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:30:07.166 | INFO     | app.main:process_document:79 | Processing request 77b057ab - File: test_sample.pdf
+2026-04-04 22:30:07.168 | INFO     | app.main:process_document:102 | [77b057ab] Phase 1: Starting extraction
+2026-04-04 22:30:07.168 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-04 22:30:07.498 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-04 22:30:07.498 | INFO     | app.main:process_document:110 | [77b057ab] Phase 2: Starting agentic cleansing
+2026-04-04 22:30:07.498 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:30:08.212 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:30:08.213 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:30:12.746 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:30:12.748 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:30:13.708 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:30:13.708 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:30:13.708 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:30:13.708 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 6209.68ms
+2026-04-04 22:30:13.708 | INFO     | app.main:process_document:116 | [77b057ab] Phase 3: Starting JSON structuring
+2026-04-04 22:30:13.708 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:30:13.931 | ERROR    | app.services.llm_service:complete:72 | groq failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-04 22:30:13.932 | INFO     | app.services.llm_service:complete:56 | Attempting completion with openai
+2026-04-04 22:30:16.866 | ERROR    | app.services.llm_service:complete:72 | openai failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-04-04 22:30:16.867 | INFO     | app.services.llm_service:complete:56 | Attempting completion with huggingface
+2026-04-04 22:30:17.289 | ERROR    | app.services.llm_service:complete:72 | huggingface failed: Client error '410 Gone' for url 'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410
+2026-04-04 22:30:17.290 | WARNING  | app.services.llm_service:complete:76 | All providers failed, using mock response
+2026-04-04 22:30:17.291 | WARNING  | app.services.llm_service:_mock_completion:131 | Using mock LLM response
+2026-04-04 22:30:17.295 | ERROR    | app.phases.phase3_structuring:process:61 | Validation failed: 5 validation errors for Invoice
+invoice_number
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+date
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+vendor_name
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+total_amount
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+currency
+  Field required [type=missing, input_value={'normalized_fields': {'i... [], 'confidence': 0.85}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-04-04 22:30:17.297 | INFO     | app.phases.phase3_structuring:_fix_validation_errors:97 | Attempting to fix validation errors
+2026-04-04 22:30:17.304 | INFO     | app.main:process_document:122 | [77b057ab] Processing complete in 10135.41ms
+2026-04-04 22:30:17.310 | INFO     | app.main:log_processing_metrics:175 | Metrics for 77b057ab: {'extraction': 329.9853801727295, 'cleansing': 6209.6757888793945, 'structuring': 3595.745325088501}
+2026-04-04 22:32:03.830 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:32:21.372 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:32:21.396 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:32:21.840 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:21.958 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:21.984 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:22.150 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:22.301 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:22.330 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:22.743 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:32:31.487 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:32:31.488 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:32:31.692 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:31.716 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:31.717 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:31.748 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:31.778 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:31.779 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:31.883 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:32:42.252 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:32:48.544 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:32:48.546 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:32:48.733 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:48.759 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:48.761 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:48.793 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:48.821 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:48.821 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:48.920 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:32:53.495 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:32:53.496 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:32:53.633 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:53.664 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:53.664 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:53.689 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:32:53.728 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:32:53.730 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:32:53.824 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:33:11.925 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:33:18.376 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:33:18.376 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:33:18.542 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:18.577 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:18.578 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:18.622 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:18.669 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:18.670 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:18.788 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:33:20.512 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:33:27.429 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:33:27.431 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:33:27.624 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:27.669 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:27.669 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:27.705 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:27.742 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:27.743 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:27.870 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:33:28.421 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:33:34.849 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:33:34.853 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:33:35.019 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:35.048 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:35.048 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:35.083 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:35.115 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:35.115 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:35.192 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:33:54.081 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 22:33:58.734 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:33:58.735 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:33:58.894 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:58.916 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:58.918 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:58.935 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:33:58.967 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:33:58.969 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:33:59.053 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:34:19.176 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 22:34:19.177 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 22:34:19.380 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:34:19.420 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:34:19.422 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:34:19.466 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 22:34:19.502 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 22:34:19.503 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 22:34:19.606 | INFO     | app.main:lifespan:32 | Starting Invoice Processing System
+2026-04-04 22:34:33.090 | INFO     | app.main:process_document:79 | Processing request a62c3ebd - File: test_sample.pdf
+2026-04-04 22:34:33.090 | INFO     | app.main:process_document:102 | [a62c3ebd] Phase 1: Starting extraction
+2026-04-04 22:34:33.095 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-04 22:34:33.617 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-04 22:34:33.617 | INFO     | app.main:process_document:110 | [a62c3ebd] Phase 2: Starting agentic cleansing
+2026-04-04 22:34:33.617 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 22:34:34.772 | INFO     | app.services.llm_service:complete:67 | Successfully used groq
+2026-04-04 22:34:34.775 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 1157.85ms
+2026-04-04 22:34:34.775 | INFO     | app.main:process_document:116 | [a62c3ebd] Phase 3: Starting JSON structuring
+2026-04-04 22:34:34.780 | INFO     | app.phases.phase3_structuring:process:35 | Direct mapping successful
+2026-04-04 22:34:34.782 | INFO     | app.main:process_document:122 | [a62c3ebd] Processing complete in 1686.78ms
+2026-04-04 22:34:34.787 | INFO     | app.main:log_processing_metrics:175 | Metrics for a62c3ebd: {'extraction': 521.8527317047119, 'cleansing': 1157.8459739685059, 'structuring': 7.084131240844727}
+2026-04-04 22:35:17.356 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
