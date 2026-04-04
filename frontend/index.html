@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Document Extraction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <!-- Use highlight.js for formatting JSON code block -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</head>
+<body>
+
+    <!-- Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h1>Nexus Extract AI</h1>
+            </div>
+            <p class="subtitle">Extract, Cleanse, & Structure Documents with Agentic Intelligence.</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="glass-panel upload-section" id="upload-panel">
+                <div class="upload-area" id="drop-zone">
+                    <div class="upload-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>Drag & Drop your document here</h3>
+                    <p>Supports .pdf, .png, .jpg, .jpeg file formats</p>
+                    <div class="divider"><span>OR</span></div>
+                    <label for="file-input" class="btn-primary">Browse Files</label>
+                    <input type="file" id="file-input" accept=".pdf,.png,.jpg,.jpeg" hidden>
+                </div>
+
+                <!-- Processing state -->
+                <div class="processing-state hidden" id="processing-state">
+                    <div class="spinner-container">
+                        <div class="spinner"></div>
+                        <div class="glow-effect"></div>
+                    </div>
+                    <h3 id="processing-text">Analyzing Document...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="processing-steps">
+                        <div class="step pending" id="step-1">
+                            <span class="step-dot"></span> Phase 1: Knowledge Extraction
+                        </div>
+                        <div class="step pending" id="step-2">
+                            <span class="step-dot"></span> Phase 2: Agentic Cleansing
+                        </div>
+                        <div class="step pending" id="step-3">
+                            <span class="step-dot"></span> Phase 3: JSON Structuring
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section hidden" id="results-panel">
+                <div class="results-header">
+                    <h2>Extraction Results</h2>
+                    <button class="btn-secondary" id="reset-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Process Another
+                    </button>
+                </div>
+
+                <div class="glass-panel metrics-panel">
+                    <div class="metric">
+                        <span class="metric-label">Request ID</span>
+                        <span class="metric-value id-value" id="res-req-id">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Total Time</span>
+                        <span class="metric-value time-value" id="res-time">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Status</span>
+                        <span class="metric-value status-badge success" id="res-status">COMPLETED</span>
+                    </div>
+                </div>
+
+                <div class="tabs-container glass-panel">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="final">Final JSON</button>
+                        <button class="tab-btn" data-tab="cleaned">Cleaned Data</button>
+                        <button class="tab-btn" data-tab="raw">Raw Extract</button>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-pane active" id="tab-final">
+                            <div class="code-header">Structured Pydantic Format</div>
+                            <pre><code class="language-json" id="code-final"></code></pre>
+                        </div>
+                        <div class="tab-pane" id="tab-cleaned">
+                            <div class="code-header">Agentic Cleansed Output</div>
+                            <pre><code class="language-json" id="code-cleaned"></code></pre>
+                        </div>
+                        <div class="tab-pane" id="tab-raw">
+                            <div class="code-header">Raw VLM Extraction</div>
+                            <pre><code class="language-json" id="code-raw"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="toast hidden" id="error-toast">
+        <div class="toast-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+        </div>
+        <div class="toast-content" id="toast-message">An error occurred.</div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

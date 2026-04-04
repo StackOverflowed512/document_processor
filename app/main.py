@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException, BackgroundTasks
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import uuid
@@ -174,15 +175,17 @@ async def log_processing_metrics(request_id: str, stages: dict):
     """Background task for logging metrics"""
     logger.info(f"Metrics for {request_id}: {stages}")
 
-# Optional: Add web interface endpoint
-@app.get("/ui")
-async def ui_info():
-    """Information about available UI interfaces"""
-    return {
-        "message": "FastAPI endpoints available at /docs",
-        "streamlit_ui": "Run 'streamlit run streamlit_app.py' for web interface",
-        "endpoints": {
-            "process": "POST /process - Upload and process document",
-            "health": "GET /health - System health check"
-        }
-    }
+# Mount static frontend
+import os
+frontend_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend")
+if os.path.exists(frontend_dir):
+    app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+
+@app.get("/ui", response_class=HTMLResponse)
+async def ui_endpoint():
+    """Web interface for Document Processing"""
+    index_path = os.path.join(frontend_dir, "index.html")
+    if os.path.exists(index_path):
+        with open(index_path, "r", encoding="utf-8") as f:
+            return f.read()
+    return "<html><body><h1>UI not found. Please create the frontend directory and index.html.</h1></body></html>"
