@@ -29,3 +29,12 @@
 2026-04-05 09:34:22.735 | INFO     | app.main:process_document:123 | [4d081ce9] Processing complete in 1398.30ms
 2026-04-05 09:34:22.743 | INFO     | app.main:log_processing_metrics:176 | Metrics for 4d081ce9: {'extraction': 508.3601474761963, 'cleansing': 879.6026706695557, 'structuring': 10.33329963684082}
 2026-04-05 09:38:12.552 | INFO     | app.main:lifespan:35 | Shutting down Invoice Processing System
+2026-04-05 10:08:42.282 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-05 10:08:42.285 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-05 10:08:42.665 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-05 10:08:42.707 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-05 10:08:42.710 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-05 10:08:42.752 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-05 10:08:42.810 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-05 10:08:42.812 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-05 10:08:43.214 | INFO     | app.main:lifespan:33 | Starting Invoice Processing System
