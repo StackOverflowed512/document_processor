@@ -1,0 +1,31 @@
+2026-04-05 09:27:13.337 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-05 09:27:13.337 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-05 09:27:13.742 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-05 09:27:13.781 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-05 09:27:13.781 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-05 09:27:13.815 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-05 09:27:13.847 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-05 09:27:13.847 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-05 09:27:14.033 | INFO     | app.main:lifespan:33 | Starting Invoice Processing System
+2026-04-05 09:33:58.414 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-05 09:33:58.414 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-05 09:33:58.568 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-05 09:33:58.584 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-05 09:33:58.584 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-05 09:33:58.606 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-05 09:33:58.626 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-05 09:33:58.626 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-05 09:33:58.699 | INFO     | app.main:lifespan:33 | Starting Invoice Processing System
+2026-04-05 09:34:21.334 | INFO     | app.main:process_document:80 | Processing request 4d081ce9 - File: test_invoice_1.pdf
+2026-04-05 09:34:21.334 | INFO     | app.main:process_document:103 | [4d081ce9] Phase 1: Starting extraction
+2026-04-05 09:34:21.334 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_invoice_1.pdf
+2026-04-05 09:34:21.843 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 1072 characters using pdf_text_extraction
+2026-04-05 09:34:21.843 | INFO     | app.main:process_document:111 | [4d081ce9] Phase 2: Starting agentic cleansing
+2026-04-05 09:34:21.845 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-05 09:34:22.724 | INFO     | app.services.llm_service:complete:67 | Successfully used groq
+2026-04-05 09:34:22.724 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 879.60ms
+2026-04-05 09:34:22.724 | INFO     | app.main:process_document:117 | [4d081ce9] Phase 3: Starting JSON structuring
+2026-04-05 09:34:22.735 | INFO     | app.phases.phase3_structuring:process:35 | Direct mapping successful
+2026-04-05 09:34:22.735 | INFO     | app.main:process_document:123 | [4d081ce9] Processing complete in 1398.30ms
+2026-04-05 09:34:22.743 | INFO     | app.main:log_processing_metrics:176 | Metrics for 4d081ce9: {'extraction': 508.3601474761963, 'cleansing': 879.6026706695557, 'structuring': 10.33329963684082}
+2026-04-05 09:38:12.552 | INFO     | app.main:lifespan:35 | Shutting down Invoice Processing System

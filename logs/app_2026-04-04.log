@@ -362,3 +362,25 @@ currency
 2026-04-04 22:34:34.782 | INFO     | app.main:process_document:122 | [a62c3ebd] Processing complete in 1686.78ms
 2026-04-04 22:34:34.787 | INFO     | app.main:log_processing_metrics:175 | Metrics for a62c3ebd: {'extraction': 521.8527317047119, 'cleansing': 1157.8459739685059, 'structuring': 7.084131240844727}
 2026-04-04 22:35:17.356 | INFO     | app.main:lifespan:34 | Shutting down Invoice Processing System
+2026-04-04 23:44:23.074 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-04 23:44:23.098 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-04 23:44:23.935 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 23:44:24.007 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 23:44:24.010 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 23:44:24.075 | INFO     | app.services.llm_service:_init_providers:26 | Groq provider initialized
+2026-04-04 23:44:24.130 | INFO     | app.services.llm_service:_init_providers:31 | OpenAI provider initialized
+2026-04-04 23:44:24.132 | INFO     | app.services.llm_service:_init_providers:36 | HuggingFace provider initialized
+2026-04-04 23:44:24.648 | INFO     | app.main:lifespan:33 | Starting Invoice Processing System
+2026-04-04 23:44:59.645 | INFO     | app.main:process_document:80 | Processing request 4a73f71a - File: test_sample.pdf
+2026-04-04 23:44:59.652 | INFO     | app.main:process_document:103 | [4a73f71a] Phase 1: Starting extraction
+2026-04-04 23:44:59.655 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-04 23:45:00.629 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-04 23:45:00.643 | INFO     | app.main:process_document:111 | [4a73f71a] Phase 2: Starting agentic cleansing
+2026-04-04 23:45:00.646 | INFO     | app.services.llm_service:complete:56 | Attempting completion with groq
+2026-04-04 23:45:02.227 | INFO     | app.services.llm_service:complete:67 | Successfully used groq
+2026-04-04 23:45:02.231 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 1586.99ms
+2026-04-04 23:45:02.232 | INFO     | app.main:process_document:117 | [4a73f71a] Phase 3: Starting JSON structuring
+2026-04-04 23:45:02.261 | INFO     | app.phases.phase3_structuring:process:35 | Direct mapping successful
+2026-04-04 23:45:02.261 | INFO     | app.main:process_document:123 | [4a73f71a] Processing complete in 2596.42ms
+2026-04-04 23:45:02.277 | INFO     | app.main:log_processing_metrics:176 | Metrics for 4a73f71a: {'extraction': 988.0702495574951, 'cleansing': 1588.0045890808105, 'structuring': 20.34449577331543}
+2026-04-04 23:52:05.244 | INFO     | app.main:lifespan:35 | Shutting down Invoice Processing System

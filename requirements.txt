@@ -31,3 +31,5 @@ redis # Optional: for caching
 
 # Monitoring
 prometheus-fastapi-instrumentator
+
+reportlab
