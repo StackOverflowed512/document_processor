@@ -9,15 +9,13 @@ load_dotenv()
 class Settings(BaseSettings):
     """Application configuration"""
     
-    # API Keys
-    openai_api_key: Optional[str] = os.getenv("OPENAI_API_KEY")
-    groq_api_key: Optional[str] = os.getenv("GROQ_API_KEY")
-    huggingface_api_key: Optional[str] = os.getenv("HUGGINGFACE_API_KEY")
+    # Mistral API Configuration
+    mistral_api_key: str = os.getenv("MISTRAL_API_KEY", "")
+    mistral_api_url: str = os.getenv("MISTRAL_API_URL", "https://api.mistral.ai/v1/chat/completions")
+    mistral_model: str = os.getenv("MISTRAL_MODEL", "mistral-small-latest")
     
     # Model Configuration
-    primary_vlm_model: str = os.getenv("PRIMARY_VLM_MODEL", "qwen-vl")
-    vision_model_api_base: str = os.getenv("VISION_MODEL_API_BASE", "https://api.openrouter.ai/v1")
-    llm_model_for_cleansing: str = os.getenv("LLM_MODEL_FOR_CLEANSING", "llama-3.1-8b-instant")
+    primary_vlm_model: str = os.getenv("PRIMARY_VLM_MODEL", "pixtral-12b-2409")
     
     # OCR Settings
     ocr_engine: str = os.getenv("OCR_ENGINE", "tesseract")

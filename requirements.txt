@@ -24,6 +24,7 @@ opencv-python
 python-dotenv
 tenacity
 loguru
+httpx
 aiofiles
 async-timeout<5.0.0
 packaging<26.0.0

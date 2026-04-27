@@ -1,0 +1,16 @@
+2026-04-27 22:39:23.025 | INFO     | app.utils.logging_config:setup_logging:115 | Logging initialized with level: INFO
+2026-04-27 22:39:23.027 | INFO     | app.utils.logging_config:setup_logging:116 | Log to file: True, JSON format: False
+2026-04-27 22:39:23.028 | INFO     | app.services.llm_service:__init__:21 | LLM Service initialized with Mistral model: mistral-small-latest
+2026-04-27 22:39:23.029 | INFO     | app.services.llm_service:__init__:21 | LLM Service initialized with Mistral model: mistral-small-latest
+2026-04-27 22:39:23.183 | INFO     | app.main:lifespan:33 | Starting Invoice Processing System
+2026-04-27 22:40:07.249 | INFO     | app.main:process_document:80 | Processing request 28ee18c7 - File: test_sample.pdf
+2026-04-27 22:40:07.251 | INFO     | app.main:process_document:103 | [28ee18c7] Phase 1: Starting extraction
+2026-04-27 22:40:07.252 | INFO     | app.phases.phase1_ingestion:process:62 | Processing PDF test_sample.pdf
+2026-04-27 22:40:07.995 | INFO     | app.phases.phase1_ingestion:process:96 | Extraction complete: 880 characters using pdf_text_extraction
+2026-04-27 22:40:07.997 | INFO     | app.main:process_document:111 | [28ee18c7] Phase 2: Starting agentic cleansing
+2026-04-27 22:40:12.638 | INFO     | app.phases.phase2_agent:process:47 | Cleansing complete in 4640.47ms
+2026-04-27 22:40:12.649 | INFO     | app.main:process_document:117 | [28ee18c7] Phase 3: Starting JSON structuring
+2026-04-27 22:40:12.686 | INFO     | app.phases.phase3_structuring:process:35 | Direct mapping successful
+2026-04-27 22:40:12.687 | INFO     | app.main:process_document:123 | [28ee18c7] Processing complete in 5420.77ms
+2026-04-27 22:40:12.703 | INFO     | app.main:log_processing_metrics:176 | Metrics for 28ee18c7: {'extraction': 745.0366020202637, 'cleansing': 4652.433156967163, 'structuring': 23.299455642700195}
+2026-04-27 22:41:36.043 | INFO     | app.main:lifespan:35 | Shutting down Invoice Processing System
