@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     tesseract_path: str = os.getenv("TESSERACT_PATH", "/usr/bin/tesseract")
     
     # File Settings
-    max_file_size: int = int(os.getenv("MAX_FILE_SIZE", 10485760))
+    max_file_size: int = int(os.getenv("MAX_FILE_SIZE", 52428800))
     allowed_extensions: List[str] = [".pdf", ".png", ".jpg", ".jpeg", ".tiff", ".txt", ".eml"]
     temp_dir: Path = Path(os.getenv("TEMP_DIR", "./temp_uploads"))
     
